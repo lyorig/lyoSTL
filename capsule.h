@@ -1,14 +1,11 @@
 #pragma once
 
-#include "lyostd_base.h"
+#include "lyostl_base.h"
 
 /* CAPSULE.H:
-   Vlastní implementace std::unique_ptr. */
+   A custom implementation of std::unique_ptr. */
 
-
-
-
-LYOSTD_BEGIN
+LYOSTL_BEGIN
 template <typename Ptr_type> class capsule {
 public:
 	capsule() : object{ nullptr }, refcount{ 1 } {}
@@ -38,4 +35,4 @@ private:
 	Ptr_type* object;
 	unsigned int refcount;
 };
-LYOSTD_END
+LYOSTL_END
